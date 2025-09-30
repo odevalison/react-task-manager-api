@@ -2,13 +2,14 @@
   "functions": {
     "api/server.ts": {
       "memory": 1024,
+      "maxDuration": 10,
       "includeFiles": "db.json"
     }
   },
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "api/server.ts"
+      "destination": "/api/server.ts"
     }
   ]
 }
