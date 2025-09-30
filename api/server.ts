@@ -1,11 +1,14 @@
 import jsonServer from "json-server";
+import path from "path";
 
-export const server = jsonServer.create();
-
-const router = jsonServer.router("db.json");
+const server = jsonServer.create();
+const router = jsonServer.router(path.join(process.cwd(), "db.json"));
 const middlewares = jsonServer.defaults();
 
 server.use(middlewares);
 server.use(jsonServer.rewriter({ "/api/*": "/$1" }));
 server.use(router);
-server.listen(3000, () => console.log("server is running"));
+
+export default function handler(req: any, res: any) {
+  server(req, res);
+}
