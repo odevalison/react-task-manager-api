@@ -5,6 +5,7 @@
   "main": "api/server.ts",
   "type": "module",
   "scripts": {
+    "start": "node dist/server.js",
     "build": "tsc",
     "dev": "tsx watch api/server.ts"
   },
