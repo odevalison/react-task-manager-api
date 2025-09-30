@@ -2,11 +2,11 @@
   "name": "fsc-task-manager-api",
   "version": "1.0.0",
   "description": "",
-  "main": "src/server.ts",
+  "main": "api/server.ts",
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "dev": "tsx watch src/server.ts"
+    "dev": "tsx watch api/server.ts"
   },
   "keywords": [],
   "author": "",
